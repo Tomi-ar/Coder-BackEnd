@@ -8,7 +8,7 @@ let prod4 = {"nombre": "Ithaca", "precio": "250", "thumb": "https://www.ambev.co
 const app = async () => {
     const Products1 = new Contenedor("./db/productos.txt");
 
-    await Products1.save(prod3)
+    await Products1.save(prod1)
     // await Products1.getById(3)
     // await Products1.getAll()
     // await Products1.deleteId(5)
