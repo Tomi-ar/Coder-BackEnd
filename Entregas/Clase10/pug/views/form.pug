@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include ./partials/head.pug
+    body
+        include ./partials/nav.pug
+        .container
+            h1.text-center Carga de productos
+            form(action='/productos/form' method='post')
+                .form.row.mt-3.justify-content-center.border.border-primary
+                    .col-12.col-md-6.text-center
+                        .my-3
+                            label.input Nombre
+                            input(type='text' name='nombre')
+                        .my-3
+                            label.input Precio
+                            input(type='number' name='precio')
+                        .my-3
+                            label.input Link
+                            input(type='text' name='thumb')
+                        input.btn.btn-primary.my-3(type='submit' value='Enviar')
+                        a.btn.btn-warning(role='button' href='/') Volver al inicio

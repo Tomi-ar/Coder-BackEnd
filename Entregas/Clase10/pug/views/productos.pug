@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include ./partials/head.pug
+    body
+        include ./partials/nav.pug
+        .container
+            h2 Lista de productos con PUG
+            if check === true
+                h3.p-3 No se encontraron productos :(
+            else
+                each producto in data
+
+                    div(classname='border mx-1 my-3')
+                        div(classname='row pt-2')
+                        div(classname='col-1 text-center')
+                            img(src=producto.thumb alt='foto del prod' classname='ml-0' height='60px')
+                        div(classname='col-6 offset-1')
+                            h4=producto.nombre
+                        div(classname='col-2 offset-sm-1 text-center')
+                            p=producto.precio
+                a.btn.btn-warning(role='button' href='/') Volver al inicio
