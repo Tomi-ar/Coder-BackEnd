@@ -12,6 +12,7 @@ html(lang="en")
             h2 Lista de productos con PUG
             if check === true
                 h3.p-3 No se encontraron productos :(
+                a.btn.btn-warning(role='button' href='/') Volver al inicio
             else
                 each producto in data
 

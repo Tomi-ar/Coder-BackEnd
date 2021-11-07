@@ -7,7 +7,7 @@ const router = new Router()
 router.get("/", (req, res) => {
     let check = false;
     arr.length === 0 ? check = true : check = false;
-    res.render("productos", {data: arr})
+    res.render("productos", {check: check, data: arr})
 })
 
 router.get("/form", (req, res) => {

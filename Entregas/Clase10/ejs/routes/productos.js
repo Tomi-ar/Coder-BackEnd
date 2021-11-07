@@ -6,7 +6,7 @@ const router = new Router();
 
 router.get("/", (req, res) => {
     let check = false;
-    arr.length == undefined ? check = true : check = false;
+    arr.length === 0 ? check = true : check = false;
     res.render("productos", {data: arr, validate:check})
 })
 
