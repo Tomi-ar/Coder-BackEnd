@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('./templates/head.ejs')  %>
+</head>
+
+<body>
+    <%- include('./templates/nav.ejs') %>
+        <div class="container">
+            <h1>Bienvenidos a mi pagina con EJS!</h1>
+            <a class="btn btn-warning m-3" role="button" href="/productos">Ir a productos</a>
+            <a class="btn btn-warning m-3" role="button" href="/productos/form">Agregar un producto</a>
+        </div>
+</body>
+
+</html>

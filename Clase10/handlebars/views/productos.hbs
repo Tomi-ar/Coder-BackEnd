@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Lista de productos con Hbs</h2>
+        
+        {{!-- {{equalsLength arr 0}}
+            <h3 class="p-3">No se encontraron productos :(</h3>
+        {{/equalsLength}} --}}
+        {{#if check}}
+        <h3 class="p-3">No se encontraron productos :(</h3>
+        {{else}}
+            {{#each data}}      
+            <div className="border mx-1 my-3">
+                <div className="row pt-2">
+                    <div className="col-1 text-center">
+                        <img src={{this.thumb}} alt="foto del prod" className="ml-0" height="60px"/>
+                    </div>
+                    <div className="col-6 offset-1">
+                        <h4>{{this.nombre}}</h4>
+                    </div>
+                    <div className="col-2 offset-sm-1 text-center">
+                        <p  >{{this.precio}}</p>
+                    </div>
+                </div>
+            </div> 
+            {{/each}}
+        {{/if}}
+       
+    <a class="btn btn-warning" role="button" href="/">Volver al inicio</a>
+</div>
